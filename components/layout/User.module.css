@@ -10,4 +10,8 @@
 .container p {
     font-size: 1rem;
     color: #FFFFFF;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
 }

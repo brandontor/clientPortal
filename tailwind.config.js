@@ -10,7 +10,8 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        '10': '10%'
+        '10': '10%',
+        '7.5%': '7.5%',
       }
     }
   }
