@@ -54,7 +54,7 @@
 }
 
 .question {
-    min-height: 10rem;
+    min-height: 5rem;
 }
 
 .question p {
@@ -69,9 +69,11 @@
 
 .answer {
     min-height: 5rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    margin-bottom: 2rem;
 }
 
 .answer textarea {
@@ -84,7 +86,7 @@
 }
 
 .answer button {
-    height: 40%;
+    height: 2rem;
     width: 100px;
     background-color: #AB47BC;
     color: #fff;
@@ -92,9 +94,3 @@
     border-radius: 8px;
 }
 
-.comments {
-    height: auto;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    width: 100%;
-}
