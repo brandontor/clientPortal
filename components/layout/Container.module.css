@@ -1,6 +1,5 @@
 .container {
     width: 90%;
     height: 100%;
-    background-color: #5E81AC;
-    opacity: 10%;
+    background-color: rgba(94, 129, 172, 0.1);
 }
