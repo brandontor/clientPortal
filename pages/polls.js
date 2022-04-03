@@ -6,6 +6,7 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import Box from '@mui/material/Box';
+import styles from './polls.module.css'
 
 
 function polls() {
@@ -25,7 +26,7 @@ function polls() {
     }
 
 
-  return (
+return (
     <div className='w-full h-full'>
         <div className='w-full h-full'>
             <TabContext value={value}>
@@ -36,9 +37,23 @@ function polls() {
                     </TabList>
                 </Box>
                 <TabPanel sx={panelStyles} value="1">
+                    <div className={styles.currentPoll}>
+                        <p>Current Poll</p>
+                    </div>
+                    <PollsPostOn></PollsPostOn>
+                    <div className={styles.pastPoll}>
+                        <p>Past Polls</p>
+                    </div>
                     <PollsPostOn></PollsPostOn>
                 </TabPanel>
                 <TabPanel sx={panelStyles} value="2">
+                    <div className={styles.currentPoll}>
+                        <p>Current Poll</p>
+                    </div>
+                    <PollsPostQc></PollsPostQc>
+                    <div className={styles.pastPoll}>
+                        <p>Past Polls</p>
+                    </div>
                     <PollsPostQc></PollsPostQc>
                 </TabPanel>
             </TabContext>

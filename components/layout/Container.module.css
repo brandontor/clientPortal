@@ -2,4 +2,5 @@
     width: 90%;
     height: 100%;
     background-color: rgba(94, 129, 172, 0.1);
+    overflow-y: scroll;
 }
