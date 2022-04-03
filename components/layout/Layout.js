@@ -4,8 +4,10 @@ import User from './User'
 import Header from './Header'
 import Head from 'next/head'
 import Navigation from './Navigation'
+import Container from './Container'
+import Footer from './Footer'
 
-function Layout() {
+function Layout({ children }) {
   return (
     <div className={styles.container}>
        <Head>
@@ -16,6 +18,10 @@ function Layout() {
       <User></User>
       <Header></Header>
       <Navigation></Navigation>
+      <Container>
+        {children}
+      </Container>
+      <Footer></Footer>
     </div>
   )
 }

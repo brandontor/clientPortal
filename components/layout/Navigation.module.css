@@ -24,5 +24,13 @@
 }
 
 .right {
-    width: 50%;
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2rem;
+    
+}
+
+.right span {
+    font-family: 'Montserrat' !important;
 }
