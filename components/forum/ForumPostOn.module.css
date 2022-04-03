@@ -1,6 +1,6 @@
 .container {
     width: 90%;
-    height: 300px;
+    height: auto;
     min-height: 300px;
     display: flex;
     flex-direction: column;
@@ -12,8 +12,7 @@
 
 .header {
     width: 100%;
-    height: 15%;
-    bottom: 82.5%;
+    min-height: 3.5rem;
     background: #42A5F5;
     border-radius: 12px 12px 0px 0px;
     z-index: 1;
@@ -40,7 +39,7 @@
 }
 
 .title {
-    height: 20%;
+    min-height: 3rem;
     display: flex;
     align-items: center;
 }
@@ -55,7 +54,7 @@
 }
 
 .question {
-    height: calc((100% - 20%)/2);
+    min-height: 10rem;
 }
 
 .question p {
@@ -69,7 +68,7 @@
 }
 
 .answer {
-    height: calc((100% - 20%)/2);
+    min-height: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -91,4 +90,11 @@
     color: #fff;
     margin-left: 1rem;
     border-radius: 8px;
+}
+
+.comments {
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
 }

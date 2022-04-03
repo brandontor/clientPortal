@@ -14,9 +14,17 @@ function home() {
     setValue(newValue);
   };
 
+  const panelStyles = {
+    height: '100%',
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
+  }
+
   return (
-    <div>
-      <div>
+    <div className='w-full h-full'>
+      <div className='w-full h-full'>
         <TabContext value={value}>
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
             <TabList onChange={handleChange} aria-label="lab API tabs example">
@@ -24,10 +32,10 @@ function home() {
               <Tab label="Quebec" value="2" />
             </TabList>
           </Box>
-          <TabPanel value="1">
+          <TabPanel sx={panelStyles} value="1">
             <ForumPostOn></ForumPostOn>
           </TabPanel>
-          <TabPanel value="2">
+          <TabPanel sx={panelStyles} value="2">
             <ForumPostQc></ForumPostQc>
           </TabPanel>
         </TabContext>

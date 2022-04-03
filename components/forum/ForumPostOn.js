@@ -1,10 +1,21 @@
-import { TextField } from '@mui/material'
-import React from 'react'
+import React, {useState} from 'react'
+import CommentCard from './comments/CommentCard'
 import styles from './ForumPostOn.module.css'
 
 function ForumPostOn() {
+    const [showComments, setShowComments] = useState(false)
 
-  return (
+
+
+    const commentsHandler = () => {
+        if(showComments) {
+            setShowComments(false)
+            return
+        }
+        setShowComments(true)
+    }
+
+    return (
     <div className={styles.container}>
         <div className={styles.header}>
             <p>Ontario - Skin - ForumPost</p>
@@ -19,6 +30,17 @@ function ForumPostOn() {
             <div className={styles.answer}>
                 <textarea placeholder='Comment'></textarea>
                 <button>Submit</button>
+            </div>
+            <div className={styles.comments}>
+                <button onClick={commentsHandler}>Show Comments</button>
+                {showComments && 
+                <div className={styles.commentsFeed}>
+                    <ul>
+                        <CommentCard></CommentCard>
+                        <CommentCard></CommentCard>
+                    </ul>
+                </div>
+                }
             </div>
         </div>
 
