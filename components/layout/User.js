@@ -11,14 +11,21 @@ function User({user}) {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = () => {
+
+  const handleClose = (e) => {
     setAnchorEl(null);
-    signMeOut()
+    // console.log('this is e', e.target.id)
+    if(e.target.id === "logout") {
+      signMeOut()
+    }
+    
   };
 
+ 
 
   return (
     <div className={styles.container}>
@@ -45,7 +52,7 @@ function User({user}) {
               sx={{marginTop:'3px'}}
             >
               <MenuItem onClick={handleClose}>Profile</MenuItem>
-              <MenuItem onClick={handleClose}>Logout</MenuItem>
+              <MenuItem id="logout" onClick={handleClose}>Logout</MenuItem>
             </Menu>
         </div>
     </div>
