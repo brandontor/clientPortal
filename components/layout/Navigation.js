@@ -6,12 +6,12 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 
-function Navigation() {
+function Navigation({user}) {
 
     const [selectedIndex, setSelectedIndex] = useState(1);
-
+    let name = user
     const handleListItemClick = (event, index) => {
-      setSelectedIndex(index);
+        setSelectedIndex(index);
     };
 
     const style = {
@@ -27,7 +27,7 @@ function Navigation() {
     return (
         <div className={styles.container}>
             <div className={styles.left}>
-                <p>Hello User</p>
+                <p>Hello {name.toUpperCase()}</p>
             </div>
             <div className={styles.right}>
             <List sx={style} component="nav" aria-label="mailbox folders">

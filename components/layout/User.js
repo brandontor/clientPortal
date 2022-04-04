@@ -6,7 +6,7 @@ import MenuItem from '@mui/material/MenuItem';
 import PersonIcon from '@mui/icons-material/Person';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-function User() {
+function User({user}) {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -29,7 +29,7 @@ function User() {
               onClick={handleClick}
             >
               <PersonIcon sx={{color: '#fff'}}/>
-              <p>User</p>
+              <p>{user}</p>
               <ExpandMoreIcon sx={{color: '#fff'}}/>
             </Button>
             <Menu
