@@ -23,9 +23,9 @@ function Layout({ children }) {
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
             <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>  
           </Head>
-        <User user={currentUser.displayName}></User>
+        <User></User>
         <Header></Header>
-        <Navigation user={currentUser.displayName}></Navigation>
+        <Navigation></Navigation>
         <Container children={children}>
         </Container>
         <Footer></Footer>
