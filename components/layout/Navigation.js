@@ -9,7 +9,7 @@ import Divider from '@mui/material/Divider';
 function Navigation({user}) {
 
     const [selectedIndex, setSelectedIndex] = useState(1);
-    let name = user
+    // let name = user
     const handleListItemClick = (event, index) => {
         setSelectedIndex(index);
     };
@@ -27,7 +27,7 @@ function Navigation({user}) {
     return (
         <div className={styles.container}>
             <div className={styles.left}>
-                <p>Hello {name.toUpperCase()}</p>
+                <p>Hello User</p>
             </div>
             <div className={styles.right}>
             <List sx={style} component="nav" aria-label="mailbox folders">

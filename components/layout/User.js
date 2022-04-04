@@ -5,6 +5,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import PersonIcon from '@mui/icons-material/Person';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import {signMeOut} from '../../lib/auth'
 
 function User({user}) {
 
@@ -15,6 +16,7 @@ function User({user}) {
   };
   const handleClose = () => {
     setAnchorEl(null);
+    signMeOut()
   };
 
 
@@ -29,7 +31,7 @@ function User({user}) {
               onClick={handleClick}
             >
               <PersonIcon sx={{color: '#fff'}}/>
-              <p>{user}</p>
+              <p>{user && user}</p>
               <ExpandMoreIcon sx={{color: '#fff'}}/>
             </Button>
             <Menu
