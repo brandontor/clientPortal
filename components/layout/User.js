@@ -5,18 +5,27 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import PersonIcon from '@mui/icons-material/Person';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import {signMeOut} from '../../lib/auth'
 
-function User() {
+function User({user}) {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = () => {
+
+  const handleClose = (e) => {
     setAnchorEl(null);
+    // console.log('this is e', e.target.id)
+    if(e.target.id === "logout") {
+      signMeOut()
+    }
+    
   };
 
+ 
 
   return (
     <div className={styles.container}>
@@ -43,7 +52,7 @@ function User() {
               sx={{marginTop:'3px'}}
             >
               <MenuItem onClick={handleClose}>Profile</MenuItem>
-              <MenuItem onClick={handleClose}>Logout</MenuItem>
+              <MenuItem id="logout" onClick={handleClose}>Logout</MenuItem>
             </Menu>
         </div>
     </div>
