@@ -31,7 +31,7 @@ function User({user}) {
               onClick={handleClick}
             >
               <PersonIcon sx={{color: '#fff'}}/>
-              <p>{user && user}</p>
+              <p>{user}</p>
               <ExpandMoreIcon sx={{color: '#fff'}}/>
             </Button>
             <Menu
