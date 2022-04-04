@@ -5,13 +5,21 @@ import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
+import { useRouter } from 'next/router';
 
 function Navigation({user}) {
 
     const [selectedIndex, setSelectedIndex] = useState(1);
-    let name = user;
+    const router = useRouter()
+  
     const handleListItemClick = (event, index) => {
         setSelectedIndex(index);
+        if(index === 1) {
+            router.push('/home')
+        }
+        if(index === 2) {
+            router.push('/polls')
+        }
     };
 
     const style = {
@@ -31,14 +39,6 @@ function Navigation({user}) {
             </div>
             <div className={styles.right}>
             <List sx={style} component="nav" aria-label="mailbox folders">
-                <ListItemButton
-                    sx={buttonStyles}
-                    selected={selectedIndex === 0}
-                    onClick={(event) => handleListItemClick(event, 0)}
-                >
-                    <ListItemText primary="DASHBOARD" />
-                </ListItemButton>
-                <Divider />
                 <ListItemButton 
                     sx={buttonStyles}
                     selected={selectedIndex === 1}
